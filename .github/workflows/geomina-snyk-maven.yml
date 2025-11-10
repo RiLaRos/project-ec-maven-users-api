@@ -1,4 +1,4 @@
-name: Example workflow for Maven using Snyk
+name: Workflow for Maven using Snyk
 on: push
 
 permissions:
@@ -9,7 +9,7 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v3
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/maven@main
         continue-on-error: true # To make sure that SARIF upload gets called
